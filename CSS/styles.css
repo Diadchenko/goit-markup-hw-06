@@ -591,6 +591,7 @@ img {
 
 .footer-wrap {
   margin-left: auto;
+  position: relative;
 }
 
 .footer-input-title {
@@ -614,11 +615,14 @@ img {
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   background-color: transparent;
+  outline: none;
 
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-input::placeholder {
@@ -630,7 +634,12 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-input:focus {
+  border-color: #2196f3;
+}
+
 .footer-btn {
+  position: relative;
   width: 200px;
   height: 50px;
   background: #2196f3;
@@ -643,12 +652,17 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: #ffffff;
+
+  padding: 10px 62px 10px 29px;
 }
 
 .icon-btn {
-  fill: #ffffff;
   position: absolute;
-  left: 0;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  fill: #ffffff;
 }
 
 /* ---------------------PORTFOLIO-------------------------*/
